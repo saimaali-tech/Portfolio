@@ -24,3 +24,358 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+@tailwind utilities;
+
+/* Mobile-first styles (default for small phones ≤480px) */
+.nav-container {
+  padding: 1rem;
+}
+.nav-logo {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+}
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  background-color: #1f2937; /* gray-800 */
+  padding: 1rem;
+  z-index: 10;
+}
+.nav-menu.open {
+  display: block;
+}
+.nav-menu li {
+  padding: 0.5rem 0;
+}
+.nav-menu a {
+  font-size: 0.875rem; /* 14px */
+}
+.hamburger {
+  display: block;
+  font-size: 1.5rem; /* 24px */
+}
+.section-container {
+  padding: 2rem 1rem;
+}
+.section-heading {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+}
+.category-heading {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.skills-list {
+  font-size: 0.875rem; /* 14px */
+}
+.progress-bar {
+  height: 0.5rem; /* 8px */
+}
+.footer {
+  padding: 1rem;
+  font-size: 0.875rem; /* 14px */
+}
+
+/* Medium phones (481px–600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+  .nav-logo {
+    font-size: 1.25rem; /* 20px */
+  }
+  .nav-menu a {
+    font-size: 0.9375rem; /* 15px */
+  }
+  .section-container {
+    padding: 2rem 1.5rem;
+  }
+  .section-heading {
+    font-size: 1.625rem; /* 26px */
+  }
+  .category-heading {
+    font-size: 1.1875rem; /* 19px */
+  }
+  .skills-list {
+    font-size: 0.9375rem; /* 15px */
+  }
+  .footer {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* Large phones / small phablets (601px–767px) */
+@media (min-width: 601px) and (max-width: 767px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+  .nav-logo {
+    font-size: 1.25rem; /* 20px */
+  }
+  .nav-menu a {
+    font-size: 1rem; /* 16px */
+  }
+  .section-container {
+    padding: 2.5rem 1.5rem;
+  }
+  .section-heading {
+    font-size: 1.75rem; /* 28px */
+  }
+  .category-heading {
+    font-size: 1.25rem; /* 20px */
+  }
+  .skills-list {
+    font-size: 1rem; /* 16px */
+  }
+  .footer {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+/* Small tablets (768px–899px) */
+@media (min-width: 768px) and (max-width: 899px) {
+  .nav-container {
+    padding: 1.5rem 2rem;
+  }
+  .nav-logo {
+    font-size: 1.25rem; /* 20px */
+  }
+  .nav-menu {
+    display: flex;
+    gap: 1rem;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav-menu li a {
+    font-size: 1rem; /* 16px */
+  }
+  .hamburger {
+    display: none;
+  }
+  .section-container {
+    padding: 3rem 2rem;
+  }
+  .section-heading {
+    font-size: 1.875rem; /* 30px */
+  }
+  .category-heading {
+    font-size: 1.25rem; /* 20px */
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .skills-list {
+    font-size: 1rem; /* 16px */
+  }
+  .progress-bar {
+    height: 0.75rem; /* 12px */
+  }
+  .footer {
+    padding: 1.5rem;
+    font-size: 1rem; /* 16px */
+  }
+}
+
+/* Large tablets (900px–1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .nav-container {
+    padding: 1.5rem 2rem;
+  }
+  .nav-logo {
+    font-size: 1.375rem; /* 22px */
+  }
+  .nav-menu {
+    display: flex;
+    gap: 1.25rem;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav-menu li a {
+    font-size: 1.125rem; /* 18px */
+  }
+  .hamburger {
+    display: none;
+  }
+  .section-container {
+    padding: 3rem 2rem;
+  }
+  .section-heading {
+    font-size: 2rem; /* 32px */
+  }
+  .category-heading {
+    font-size: 1.375rem; /* 22px */
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .skills-list {
+    font-size: 1.125rem; /* 18px */
+  }
+  .progress-bar {
+    height: 0.75rem; /* 12px */
+  }
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Small desktop / laptop (1025px–1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .nav-container {
+    padding: 1.5rem 2rem;
+  }
+  .nav-logo {
+    font-size: 1.375rem; /* 22px */
+  }
+  .nav-menu {
+    display: flex;
+    gap: 1.25rem;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav-menu li a {
+    font-size: 1.125rem; /* 18px */
+  }
+  .hamburger {
+    display: none;
+  }
+  .section-container {
+    padding: 4rem 2rem;
+  }
+  .section-heading {
+    font-size: 2.25rem; /* 36px */
+  }
+  .category-heading {
+    font-size: 1.5rem; /* 24px */
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .skills-list {
+    font-size: 1.125rem; /* 18px */
+  }
+  .progress-bar {
+    height: 0.75rem; /* 12px */
+  }
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Large desktop (1281px–1536px) */
+@media (min-width: 1281px) and (max-width: 1536px) {
+  .nav-container {
+    padding: 1.5rem 2rem;
+  }
+  .nav-logo {
+    font-size: 1.5rem; /* 24px */
+  }
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav-menu li a {
+    font-size: 1.125rem; /* 18px */
+  }
+  .hamburger {
+    display: none;
+  }
+  .section-container {
+    padding: 4rem 2rem;
+  }
+  .section-heading {
+    font-size: 2.25rem; /* 36px */
+  }
+  .category-heading {
+    font-size: 1.5rem; /* 24px */
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .skills-list {
+    font-size: 1.125rem; /* 18px */
+  }
+  .progress-bar {
+    height: 0.75rem; /* 12px */
+  }
+  .footer {
+    padding: 2rem;
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* Extra large monitors (>1536px) */
+@media (min-width: 1537px) {
+  .nav-container {
+    padding: 2rem 2.5rem;
+  }
+  .nav-logo {
+    font-size: 1.75rem; /* 28px */
+  }
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+  }
+  .nav-menu li a {
+    font-size: 1.25rem; /* 20px */
+  }
+  .hamburger {
+    display: none;
+  }
+  .section-container {
+    padding: 4rem 2.5rem;
+    max-width: 1536px;
+    margin: 0 auto;
+  }
+  .section-heading {
+    font-size: 2.5rem; /* 40px */
+  }
+  .category-heading {
+    font-size: 1.75rem; /* 28px */
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .skills-list {
+    font-size: 1.25rem; /* 20px */
+  }
+  .progress-bar {
+    height: 1rem; /* 16px */
+  }
+  .footer {
+    padding: 2rem;
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
