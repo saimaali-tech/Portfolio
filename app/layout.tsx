@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "@/src/components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,20 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="bg-gray-800 p-4 text-white">
-          <div className="container mx-auto flex justify-between">
-            <a href="/" className="text-xl font-bold">My Portfolio</a>
-            <ul className="flex space-x-4">
-              <li><a href="#about">About</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
-            </ul>
-          </div>
-        </nav>
+        <Nav />
         {children}
-        <footer className="bg-gray-800 p-4 text-white text-center mt-8">
+        <footer className="bg-gray-800 text-white text-center mt-8 py-4 px-4 sm:px-6">
           © {new Date().getFullYear()} Saima. All rights reserved.
         </footer>
       </body>

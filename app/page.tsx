@@ -9,13 +9,13 @@ import Skills from '@/src/components/Skills';
 
 export default function Home() {
   return (
-    <main>
+ <main className="flex flex-col">
       <Introduction />
       <About />
       <Education />
       <Experience />
       <Projects />
-      <Skills/>
+      <Skills />
     </main>
   );
 }
